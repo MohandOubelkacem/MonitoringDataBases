@@ -1,5 +1,3 @@
-package l3w1_Projet;
-
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -18,7 +16,7 @@ public class SqlServerMain {
 	static ResultSet rs;
 
 	/**
-	 * La fonction principale qui invoquera éventuellement les autres fonctions
+	 * La fonction principale qui invoquera Ã©ventuellement les autres fonctions
 	 * @param args, le nom d'un tableau
 	 * @throws IOException
 	 * @throws JSONException
@@ -34,13 +32,13 @@ public class SqlServerMain {
 			connectionAvecSql = agent.getConnection();
 			
 			/*
-			 * Les 2 objets qui permettent de construire et récuperer des requêtes de la BDD
-			 * Création d'un objet statement (création et exécution de la requête SQL)
+			 * Les 2 objets qui permettent de construire et rÃ©cuperer des requÃªtes de la BDD
+			 * CrÃ©ation d'un objet statement (crÃ©ation et exÃ©cution de la requÃªte SQL)
 			 */
 			ps = connectionAvecSql.createStatement();
 			
 			/*
-			 * Objet rs contient le résultat de la requête SQL (récupère et affiche)
+			 * Objet rs contient le rÃ©sultat de la requÃªte SQL (rÃ©cupÃ¨re et affiche)
 			 * Modifier UrlDB si besoin
 			 */
 			rs = ps.executeQuery("SELECT * from users");
@@ -53,7 +51,7 @@ public class SqlServerMain {
 			while (rs.next()){
 				
 				/*
-				 * récuperer les tuples de la table Users 
+				 * rÃ©cuperer les tuples de la table Users 
 				 * TEST
 				 */
 				System.out.print(rs.getInt("id_users")+" \t");

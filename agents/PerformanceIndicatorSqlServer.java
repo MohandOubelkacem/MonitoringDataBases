@@ -1,5 +1,3 @@
-package l3w1_Projet;
-
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -67,8 +65,8 @@ public class PerformanceIndicatorSqlServer extends Thread{
      
 	
 	/**
-	 * récupérer les Indicateurs de Performance pour Sql Server
-	 * @param stmt, pour exécuter une instruction SQL
+	 * rÃ©cupÃ©rer les Indicateurs de Performance pour Sql Server
+	 * @param stmt, pour exÃ©cuter une instruction SQL
 	 * @return les Indicateurs de Performance
 	 * @throws InterruptedException
 	 * @throws SQLException
@@ -84,7 +82,7 @@ public class PerformanceIndicatorSqlServer extends Thread{
 		connectionAvecSql = agent.getConnection();
 		
 		/**
-		 * Objet rs va contenir le résultat de la requête SQL 
+		 * Objet rs va contenir le rÃ©sultat de la requÃªte SQL 
 		 */
 		ResultSet rs;
 	    
@@ -193,8 +191,8 @@ public class PerformanceIndicatorSqlServer extends Thread{
 
 		
 		/**
-		 * récupérer les Indicateurs Globaux pour Sql Server
-		 * @param stmt, pour exécuter une instruction SQL
+		 * rÃ©cupÃ©rer les Indicateurs Globaux pour Sql Server
+		 * @param stmt, pour exÃ©cuter une instruction SQL
 		 * @return les Indicateurs Globaux pour Sql Server
 		 * @throws JSONException
 		 * @throws SQLException
@@ -288,8 +286,8 @@ public class PerformanceIndicatorSqlServer extends Thread{
 				"or counter_name = 'Page Reads/Sec';";
 		
 		/**
-		 récupérer physical reads et logical reads parmis les indicateurs globaux Sql Server
-		 * @param stmt, pour exécuter une instruction SQL
+		 rÃ©cupÃ©rer physical reads et logical reads parmis les indicateurs globaux Sql Server
+		 * @param stmt, pour exÃ©cuter une instruction SQL
 		 * @return physical reads et logical reads
 		 * @throws JSONException
 		 * @throws SQLException
@@ -375,8 +373,8 @@ public class PerformanceIndicatorSqlServer extends Thread{
 				
 			
 			/**
-			 * récupérer l'indicateur pour la collision parmis les indicateurs globaux Sql Server
-			 * @param stmt, pour exécuter une instruction SQL
+			 * rÃ©cupÃ©rer l'indicateur pour la collision parmis les indicateurs globaux Sql Server
+			 * @param stmt, pour exÃ©cuter une instruction SQL
 			 * @return indicateur pour la collision
 			 * @throws JSONException
 			 * @throws SQLException
@@ -453,13 +451,13 @@ public class PerformanceIndicatorSqlServer extends Thread{
 	
 		
 		/**
-		 * REQUETE : Les Clients de la base de données Sql Server
+		 * REQUETE : Les Clients de la base de donnÃ©es Sql Server
 		 */
 		private static final String Client = "sp_who2;";
 		
 		/**
-		 * récupérer les Clients de Sql Server 
-		 * @param stmt, pour exécuter une instruction SQL
+		 * rÃ©cupÃ©rer les Clients de Sql Server 
+		 * @param stmt, pour exÃ©cuter une instruction SQL
 		 * @return les Clients
 		 * @throws JSONException
 		 * @throws IOException

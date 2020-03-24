@@ -1,4 +1,4 @@
-package projetW1;
+
 
 import java.io.DataOutputStream;
 import java.io.IOException;

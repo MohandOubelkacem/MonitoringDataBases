@@ -1,4 +1,3 @@
-package l3w1_Projet;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -22,8 +21,8 @@ public class PerformanceIndicatorMySql extends Thread{
 	private static final String IndicatorG = "SELECT * FROM performance_schema.global_status;";
  
 	/**
-	 * récupérer les indicateurs globaux mysql 
-	 * @param stmt, pour exécuter une instruction SQL
+	 * rÃ©cupÃ©rer les indicateurs globaux mysql 
+	 * @param stmt, pour exÃ©cuter une instruction SQL
 	 * @return les indicateurs globaux mysql 
 	 * @throws JSONException
 	 * @throws InterruptedException
@@ -39,7 +38,7 @@ public class PerformanceIndicatorMySql extends Thread{
 		connectionAvecMySql = agent.getConnection();
 		
 		/**
-		 * Objet rs va contenir le résultat de la requête SQL
+		 * Objet rs va contenir le rÃ©sultat de la requÃªte SQL
 		 */
 		ResultSet rs;
 	    
@@ -104,7 +103,7 @@ public class PerformanceIndicatorMySql extends Thread{
 	
 	
 	/**
-	 * REQUETE : les Indicateurs selectionnés et demandés par l'encadrant pour MySql
+	 * REQUETE : les Indicateurs selectionnÃ©s et demandÃ©s par l'encadrant pour MySql
 	 */
 	private static final String IndicatorG1 = "SELECT * FROM performance_schema.global_status \r\n" + 
 			"where VARIABLE_NAME like 'Key_read_requests' \r\n" + 
@@ -120,9 +119,9 @@ public class PerformanceIndicatorMySql extends Thread{
 	
 	
 	/**
-	 * récupérer les Indicateurs selectionnés parmis les indicateurs globaux MySql
-	 * @param stmt, pour exécuter une instruction SQL
-	 * @return les Indicateurs selectionnés
+	 * rÃ©cupÃ©rer les Indicateurs selectionnÃ©s parmis les indicateurs globaux MySql
+	 * @param stmt, pour exÃ©cuter une instruction SQL
+	 * @return les Indicateurs selectionnÃ©s
 	 * @throws JSONException
 	 * @throws InterruptedException
 	 * @throws SQLException
@@ -199,8 +198,8 @@ public class PerformanceIndicatorMySql extends Thread{
 			"or VARIABLE_NAME like 'Innodb_buffer_pool_read_requests';";  //logical reads 
 	
 	/**
-	 * récupérer physical reads et logical reads parmis les indicateurs globaux MySql
-	 * @param stmt, pour exécuter une instruction SQL
+	 * rÃ©cupÃ©rer physical reads et logical reads parmis les indicateurs globaux MySql
+	 * @param stmt, pour exÃ©cuter une instruction SQL
 	 * @return physical reads et logical reads
 	 * @throws JSONException
 	 * @throws InterruptedException
@@ -276,8 +275,8 @@ public class PerformanceIndicatorMySql extends Thread{
 	
 
 	/**
-	 * récupérer l'indicateur pour la collision parmis les indicateurs globaux MySql
-	 * @param stmt, pour exécuter une instruction SQL
+	 * rÃ©cupÃ©rer l'indicateur pour la collision parmis les indicateurs globaux MySql
+	 * @param stmt, pour exÃ©cuter une instruction SQL
 	 * @return indicateur pour la collision
 	 * @throws JSONException
 	 * @throws InterruptedException
@@ -354,8 +353,8 @@ public class PerformanceIndicatorMySql extends Thread{
 	
 	
 	/**
-	 * récupérer Les indicateurs de Performance niveau Queries pour MySql
-	 * @param stmt, pour exécuter une instruction SQL
+	 * rÃ©cupÃ©rer Les indicateurs de Performance niveau Queries pour MySql
+	 * @param stmt, pour exÃ©cuter une instruction SQL
 	 * @return Les indicateurs de Performance niveau Queries 
 	 * @throws JSONException
 	 * @throws InterruptedException
@@ -433,14 +432,14 @@ public class PerformanceIndicatorMySql extends Thread{
 	
 		
 		/**
-		 * REQUETE : User de la base de données MySql
+		 * REQUETE : User de la base de donnÃ©es MySql
 		 */
 		private static final String Users = "SELECT DISTINCT(user) FROM mysql.user;";
 		
 		/**
-		 * récupérer user de la base de données MySql 
-		 * @param stmt, pour exécuter une instruction SQL
-		 * @return User de la base de données 
+		 * rÃ©cupÃ©rer user de la base de donnÃ©es MySql 
+		 * @param stmt, pour exÃ©cuter une instruction SQL
+		 * @return User de la base de donnÃ©es 
 		 * @throws JSONException
 		 * @throws InterruptedException
 		 * @throws SQLException

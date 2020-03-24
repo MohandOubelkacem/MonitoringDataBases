@@ -1,12 +1,12 @@
-package projetW1;
-
 
 import java.io.FileWriter;
+
 import java.io.IOException;
 import java.lang.management.ManagementFactory;
 
 import java.sql.SQLException;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -16,16 +16,18 @@ public class OS1{
 	 /**
 	 * permet de récupérer les données du  système d'exploitation
 	
-	 * @return retourne les données du système d'exploitation  sous format json
+	 * @return retourne les données du systÃšme d'exploitation  sous format json
 	 */
 	 public static String Os() throws SQLException, ClassNotFoundException, IOException, JSONException {
-      // la classe OperatingSystemMXBean permet de Récupérer les données système 
+      // la classe OperatingSystemMXBean permet de RÃ©cupÃ©rer les données système 
 	   OperatingSystemMXBean operatingSystemMXBean = (OperatingSystemMXBean) ManagementFactory.getOperatingSystemMXBean();
 	
      
      
-        JSONObject obj1 = new JSONObject();//créer un objet json
-      // mettre les données système dans un objet json 
+        JSONObject obj1 = new JSONObject();
+        JSONArray tabJson = new JSONArray();
+        FileWriter file=new FileWriter("/home/makhoukhene/dbbrain1/json/IndicatorOS.json");
+
         obj1.put ("Available processors: " , operatingSystemMXBean.getAvailableProcessors());
         obj1.put ("Average load: " , operatingSystemMXBean.getSystemLoadAverage());
 
@@ -40,8 +42,13 @@ public class OS1{
         obj1.put ("Process CPU load: " , operatingSystemMXBean.getProcessCpuLoad() );
         obj1.put ("Process CPU time: " ,operatingSystemMXBean.getProcessCpuTime());
         obj1.put ("System CPU load: " ,operatingSystemMXBean.getSystemCpuLoad() );
+        
+       tabJson.put(obj1);
+   		file.write(tabJson.toString());
+   		file.flush();
+   		file.close();	
+
        
-       
-        return obj1.toString();
+        return tabJson.toString();
    }
 }

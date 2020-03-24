@@ -8,8 +8,9 @@ public class TestNV {
 	public static void main (String [] args) throws SQLException, ClassNotFoundException
 	{
 		Class.forName("oracle.jdbc.OracleDriver"); 
-        Connection con =DBConnection.setConnection(); 
-        
+		
+        Connection con;
+        con=DBConnection.setConnection();
         Probability p = new Probability(con);
         
 		p.query_cpu_physic ();

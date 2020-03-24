@@ -1,0 +1,21 @@
+[{
+    "name": "Date",
+    "type": "date",
+    "format": "%-m/%d/%Y"
+},
+{
+    "name": "Max worker time",
+    "type": "number"
+},
+{
+    "name": "Max elapsed time",
+    "type": "number"
+},
+{
+    "name": "Max physical reads",
+    "type": "number"
+},
+{
+    "name": "Max logical reads",
+    "type": "number"
+}]

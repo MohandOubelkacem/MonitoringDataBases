@@ -1,6 +1,6 @@
 /**
- * cette interface regroupe les requêtes
- * celles-ci sont utilisées afin  de calculer les probabilitées 
+ * cette interface regroupe les requÃªtes
+ * celles-ci sont utilisÃ©es afin  de calculer les probabilitÃ©es 
  * @author Tassadit AIT RAMDANE 
  *
  */

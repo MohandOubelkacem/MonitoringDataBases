@@ -11,9 +11,9 @@ import org.json.JSONObject;
 
 
 /**
- * cette classe permet de calculer les probabilités de la 
+ * cette classe permet de calculer les probabilitÃ©s de la 
  * base oracle 
- * en appliquant  le théoreme naive bayes 
+ * en appliquant  le thÃ©oreme naive bayes 
  * @author Tassadit AIT RAMDANE 
  *
  */
@@ -32,31 +32,31 @@ public Probability(Connection con) {
 
 
 /**
- * calculer le nombre de lignes dans la table (cette table contient l'historique des données oracle ) 
+ * calculer le nombre de lignes dans la table (cette table contient l'historique des donnÃ©es oracle ) 
  * @return n : nombre de lignes dans l'historique (v$sql) 
- * @throws SQLException :  requête saisie incorrect 
+ * @throws SQLException :  requÃªte saisie incorrect 
  */
 public float totalnumberrows () throws SQLException {
 	
 		ResultSet rs;
-		Statement stmt =con.createStatement();           // creation de la requête
+		Statement stmt =con.createStatement();           // creation de la requÃªte
 		String query = query_total_rows;
 		float n=0;
 		stmt.execute(query);							// execution
 		rs= stmt.getResultSet();
 		if(rs.next())
 				
-				n=rs.getInt(1);                     ////récupération du résultat
+				n=rs.getInt(1);                     ////rÃ©cupÃ©ration du rÃ©sultat
 		System.out.println(n);
 		return n;
 	}
 		
 	
 	
-	/** calculer la probabilité p(cpu)
+	/** calculer la probabilitÃ© p(cpu)
 	 * 
 	 * @return p(cpu)
-	 * @throws SQLException requête saisie incorrect
+	 * @throws SQLException requÃªte saisie incorrect
 	 */
 	public float p_marginale_cpu () throws SQLException {
 		
@@ -79,10 +79,10 @@ public float totalnumberrows () throws SQLException {
 	}
 	
 	
-	/** calculer la probabilité p(elapsed_time)
+	/** calculer la probabilitÃ© p(elapsed_time)
 	 * 
 	 * @return p(elapsed_time)
-	 * @throws SQLException requête saisie incorrect
+	 * @throws SQLException requÃªte saisie incorrect
 	 */
 	public float p_marginal_elapsedtime () throws SQLException {
 		
@@ -101,10 +101,10 @@ public float totalnumberrows () throws SQLException {
 	}
 
 	
-	/** calculer la probabilité p(wait_time)
+	/** calculer la probabilitÃ© p(wait_time)
 	 * 
 	 * @return p(wait_time)
-	 * @throws SQLException requête saisie incorrect
+	 * @throws SQLException requÃªte saisie incorrect
 	 */
 	public float p_marginal_waited () throws SQLException {
 		
@@ -123,10 +123,10 @@ public float totalnumberrows () throws SQLException {
 	
 	
 	
-	/** calculer la probabilité p(physicalreads)
+	/** calculer la probabilitÃ© p(physicalreads)
 	 * 
 	 * @return p(physicalreads)
-	 * @throws SQLException requête saisie incorrect
+	 * @throws SQLException requÃªte saisie incorrect
 	 */
 	public float priori_physical () throws SQLException {
 		ResultSet rs;
@@ -143,10 +143,10 @@ public float totalnumberrows () throws SQLException {
 		return p/n;
 	}
 	
-	/** calculer la probabilité p(logicalreads)
+	/** calculer la probabilitÃ© p(logicalreads)
 	 * 
 	 * @return p(logicalreads)
-	 * @throws SQLException requête saisie incorrect
+	 * @throws SQLException requÃªte saisie incorrect
 	 */
 	public float priori_logical () throws SQLException {
 		ResultSet rs;
@@ -164,10 +164,10 @@ public float totalnumberrows () throws SQLException {
 	}
 	
 	
-	/** calculer la probabilité p(collison)
+	/** calculer la probabilitÃ© p(collison)
 	 * 
 	 * @return p(collison)
-	 * @throws SQLException requête saisie incorrect
+	 * @throws SQLException requÃªte saisie incorrect
 	 */
 	public float priori_collis () throws SQLException {
 		ResultSet rs;
@@ -184,10 +184,10 @@ public float totalnumberrows () throws SQLException {
 		return p/n;
 	}
 	
-	/** calculer la probabilité p(dispersion)
+	/** calculer la probabilitÃ© p(dispersion)
 	 * 
 	 * @return p(dispersion)
-	 * @throws SQLException requête saisie incorrect
+	 * @throws SQLException requÃªte saisie incorrect
 	 */
 	public float priori_disper () throws SQLException {
 		ResultSet rs;
@@ -207,10 +207,10 @@ public float totalnumberrows () throws SQLException {
 	
 
 	
-	/** calculer la probabilité p(physicalreads|cpu)
+	/** calculer la probabilitÃ© p(physicalreads|cpu)
 	 * 
 	 * @return p(physicalreads|cpu)
-	 * @throws SQLException requête saisie incorrect
+	 * @throws SQLException requÃªte saisie incorrect
 	 */
 	public float query_cpu_physic () throws SQLException {
 		String query = query_cpu_physic;
@@ -233,10 +233,10 @@ public float totalnumberrows () throws SQLException {
 	
 	
 	
-	/** calculer la probabilité p(logicallreads|cpu)
+	/** calculer la probabilitÃ© p(logicallreads|cpu)
 	 * 
 	 * @return p(logicalreads|cpu)
-	 * @throws SQLException requête saisie incorrect
+	 * @throws SQLException requÃªte saisie incorrect
 	 */
 	public float query_cpu_logic () throws SQLException {
 		String query = query_cpu_logiq;
@@ -257,10 +257,10 @@ public float totalnumberrows () throws SQLException {
 	}
 	
 	
-	/** calculer la probabilité p(collison|cpu)
+	/** calculer la probabilitÃ© p(collison|cpu)
 	 * 
 	 * @return p(collison|cpu)
-	 * @throws SQLException requête saisie incorrect
+	 * @throws SQLException requÃªte saisie incorrect
 	 */
 	public float query_cpu_coll () throws SQLException {
 		String query = query_cpu_collision;
@@ -281,10 +281,10 @@ public float totalnumberrows () throws SQLException {
 	}
 	
 	
-	/** calculer la probabilité p(dispersion|cpu)
+	/** calculer la probabilitÃ© p(dispersion|cpu)
 	 * 
 	 * @return p(dispersion|cpu)
-	 * @throws SQLException requête saisie incorrect
+	 * @throws SQLException requÃªte saisie incorrect
 	 */
 	public float query_cpu_dispre() throws SQLException {
 		String query = query_cpu_dispersion;
@@ -305,10 +305,10 @@ public float totalnumberrows () throws SQLException {
 	}
 	
 	
-	/** calculer la probabilité p(physicalreads|elapsedtime)
+	/** calculer la probabilitÃ© p(physicalreads|elapsedtime)
 	 * 
 	 * @return p(physicalreads|elapsedtime)
-	 * @throws SQLException requête saisie incorrect
+	 * @throws SQLException requÃªte saisie incorrect
 	 */
 	public float query_elapsed_physic () throws SQLException {
 		String query =  query_elapsed_physic;
@@ -330,10 +330,10 @@ public float totalnumberrows () throws SQLException {
 	
 	
 	
-	/** calculer la probabilité p(logicalreads|elapsedtime)
+	/** calculer la probabilitÃ© p(logicalreads|elapsedtime)
 	 * 
 	 * @return p(logicalreads|elapsedtime)
-	 * @throws SQLException requête saisie incorrect
+	 * @throws SQLException requÃªte saisie incorrect
 	 */
 	public float query_elapsed_logic () throws SQLException {
 		String query =  query_elapsed_logiq;
@@ -355,10 +355,10 @@ public float totalnumberrows () throws SQLException {
 		return ptotal1;
 	}
 	
-	/** calculer la probabilité p(collison|elapsedtime)
+	/** calculer la probabilitÃ© p(collison|elapsedtime)
 	 * 
 	 * @return p(collison|elapsedtime)
-	 * @throws SQLException requête saisie incorrect
+	 * @throws SQLException requÃªte saisie incorrect
 	 */
 	public float query_elapsed_coll () throws SQLException {
 		String query = query_elapsed_collision ;
@@ -380,10 +380,10 @@ public float totalnumberrows () throws SQLException {
 	
 	
 	
-	/** calculer la probabilité p(dispersion|elapsedtime)
+	/** calculer la probabilitÃ© p(dispersion|elapsedtime)
 	 * 
 	 * @return p(dispersion|elapsedtime)
-	 * @throws SQLException requête saisie incorrect
+	 * @throws SQLException requÃªte saisie incorrect
 	 */
 	public float query_elapsed_dispre() throws SQLException {
 		String query = query_elapsed_dispersion;
@@ -405,10 +405,10 @@ public float totalnumberrows () throws SQLException {
 	
 
 	
-	/** calculer la probabilité p(physicalreads|waitedtime)
+	/** calculer la probabilitÃ© p(physicalreads|waitedtime)
 	 * 
 	 * @return p(physicalreads|waitedtime)
-	 * @throws SQLException requête saisie incorrect
+	 * @throws SQLException requÃªte saisie incorrect
 	 */
 	public float query_waited_physic () throws SQLException {
 		String query =  query_waited_physic;
@@ -429,10 +429,10 @@ public float totalnumberrows () throws SQLException {
 	}
 	
 	
-	/** calculer la probabilité p(logicalreads|waitedtime)
+	/** calculer la probabilitÃ© p(logicalreads|waitedtime)
 	 * 
 	 * @return p(collision|waitedtime)
-	 * @throws SQLException requête saisie incorrect
+	 * @throws SQLException requÃªte saisie incorrect
 	 */
 
 	public float query_waited_logic () throws SQLException {
@@ -455,10 +455,10 @@ public float totalnumberrows () throws SQLException {
 	
 	
 	
-	/** calculer la probabilité p(logicalreads|waitedtime)
+	/** calculer la probabilitÃ© p(logicalreads|waitedtime)
 	 * 
 	 * @return p(collsion|waitedtime)
-	 * @throws SQLException requête saisie incorrect
+	 * @throws SQLException requÃªte saisie incorrect
 	 */
 	public float query_waited_coll () throws SQLException {
 		String query = query_waited_collision ;
@@ -478,10 +478,10 @@ public float totalnumberrows () throws SQLException {
 		return ptotal1;
 	}
 	
-	/** calculer la probabilité p(dispersion|waitedtime)
+	/** calculer la probabilitÃ© p(dispersion|waitedtime)
 	 * 
 	 * @return p(dispersion|waitedtime)
-	 * @throws SQLException requête saisie incorrect
+	 * @throws SQLException requÃªte saisie incorrect
 	 * */
 	public float query_waited_dispre() throws SQLException {
 		String query = query_waited_dispersion;
@@ -510,5 +510,4 @@ public float totalnumberrows () throws SQLException {
 		
 	}
 	
-
 

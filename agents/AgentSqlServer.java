@@ -1,4 +1,4 @@
-package l3w1_Projet;
+
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -13,8 +13,8 @@ public class AgentSqlServer {
 	public AgentSqlServer() {};
 	
 	/**
-	 * Se connecter à la base de données Sql Server
-	 * @return Connexion reussie ou refusée
+	 * Se connecter Ã  la base de donnÃ©es Sql Server
+	 * @return Connexion reussie ou refusÃ©e
 	 */ 
 	public Connection getConnection(){
 		    String urlBD = "jdbc:sqlserver://localhost:1433;databaseName=registration";
@@ -22,7 +22,7 @@ public class AgentSqlServer {
 			
 			try {
 				/**
-				 *Charger la classe correspondant au driver souhaité
+				 *Charger la classe correspondant au driver souhaitÃ©
 				 */
 				Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 				System.out.println("DRIVER OK");
@@ -35,7 +35,7 @@ public class AgentSqlServer {
 			}
 			try {
 				/**
-				 *Obtenir une connexion à la base de données  
+				 *Obtenir une connexion Ã  la base de donnÃ©es  
 				 */
 				connectionAvecSql = DriverManager.getConnection(urlBD,user,password);
 				System.out.println("Connection sucess!"+"\n");
@@ -51,9 +51,9 @@ public class AgentSqlServer {
 	/**
 	 *Tester si getConnection fonctionne 
 	 */
-	/*public static void main(String[] args) throws SQLException {
+	public static void main(String[] args) throws SQLException {
 		AgentSqlServer agent = new AgentSqlServer();
 		agent.getConnection();
-	}*/
+	}
 
 }

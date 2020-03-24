@@ -1,4 +1,4 @@
-package projetW1;
+
 
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -10,16 +10,17 @@ import java.sql.Statement;
 
 import org.json.JSONException;
 /** 
- * la classe permet d'exécuter la méthode indicateursPerformances de AgentPostgres plusiers fois grâce  au thread et l'envoyer grâce 
+ * la classe permet d'exÃ©cuter la mÃ©thode indicateursPerformances de AgentPostgres plusiers fois grÃ¢ce  au thread et l'envoyer grÃ¢ce 
  *  au socket
- *  on peut utiliser la même classe pour les autre bases de données  il faut juste changer la méthode indicateursPerformances de AgentPostgres 
- *  par la base de données concerné  
+ *  on peut utiliser la mÃªme classe pour les autre bases de donnÃ©es  il faut juste changer la mÃ©thode indicateursPerformances de AgentPostgres 
+ *  par la base de donnÃ©es concernÃ©  
 
  */
-public class TheardTime implements Runnable {
+	public class TheardTime implements Runnable {
 	Connection connection;
 	private Statement stmt1;
 	private Socket s; 
+	
 	public TheardTime(Connection connection,Statement stmt1) {
 		
 		this.stmt1=stmt1;
@@ -33,15 +34,14 @@ public class TheardTime implements Runnable {
 		while(true) {
 			 try {
 					Thread.sleep(20000);
-					 s = new Socket("10.30.1.59",6660);// Crée un socket avec l'adresse ip du destinataire et port 6660
-		
-				 DataOutputStream 	os = new DataOutputStream(s.getOutputStream());
+					 s = new Socket("10.30.1.59",6660);// Créer un socket avec l'adresse IP du destinataire et port 6660 Serveur
+					 DataOutputStream 	os = new DataOutputStream(s.getOutputStream());
 					String  pl=AgentPostgres.indicateursPerformances(stmt1);// Appelle de la méthode indicateursPerformance de la classe AgentMysql
 					String p="indicateursPerformancePostger";
 					System.out.println(p);
 					os.writeUTF(p);
-				 os.writeUTF(pl);//écrire sur le flux de sortie (socket s)
-				 os.flush();
+					os.writeUTF(pl);//écrire sur le flux de sortie (socket s)
+					os.flush();
 
 		
 					

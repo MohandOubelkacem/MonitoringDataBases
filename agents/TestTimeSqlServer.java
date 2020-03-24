@@ -1,4 +1,3 @@
-package l3w1_Projet;
 
 import java.io.IOException;
 import java.net.UnknownHostException;
@@ -8,7 +7,7 @@ import java.sql.Statement;
 import org.json.JSONException;
 
 /**
- * la classe permet d'exécuter les ThreadTimeSqlServer1, ThreadTimeSqlServer2 et ThreadTimeSqlServer3 
+ * la classe permet d'exÃ©cuter les ThreadTimeSqlServer1, ThreadTimeSqlServer2 et ThreadTimeSqlServer3 
  */
 public class TestTimeSqlServer {
 	
@@ -22,12 +21,12 @@ public class TestTimeSqlServer {
 		 Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 		 
 		 /**
-		  * Connexion à la base de données Sql Server 
+		  * Connexion aÌ€ la base de donneÌes Sql Server 
 		  */
 		 Connection connectionAvecSql = agent.getConnection();
 		 
 		 /**
-		  * récupération d'un Statement à partir de la connexion
+		  * reÌcupeÌration d'un Statement aÌ€ partir de la connexion
 		  */
 		 Statement stmt1 = connectionAvecSql.createStatement( );
 		 

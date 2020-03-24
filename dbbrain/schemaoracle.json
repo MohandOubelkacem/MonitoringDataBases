@@ -1,0 +1,21 @@
+[{
+    "name": "Date",
+    "type": "date",
+    "format": "%-m/%d/%Y"
+},
+{
+    "name": "disk reads",
+    "type": "number"
+},
+{
+    "name": "buffer gets",
+    "type": "number"
+},
+{
+    "name": "Elapsed time",
+    "type": "number"
+},
+{
+    "name": "Cpu time",
+    "type": "number"
+}]

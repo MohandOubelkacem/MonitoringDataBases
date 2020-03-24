@@ -1,4 +1,3 @@
-package projetL3W1;
 
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -59,4 +58,3 @@ public class ThreadTime4 implements Runnable{
 		}
 
 	}}
-

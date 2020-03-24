@@ -1,5 +1,3 @@
-package l3w1_Projet;
-
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.Socket;
@@ -9,8 +7,8 @@ import java.sql.Statement;
 import org.json.JSONException;
 
 /**
- * la classe permet d'exÈcuter la mÈthode indicator() de la classe PerformanceIndicatorMySql plusiers fois gr‚ce au thread 
- * et l'envoyer gr‚ce au socket
+ * la classe permet d'ex√©cuter la m√©thode indicator() de la classe PerformanceIndicatorMySql plusiers fois gr√¢ce au thread 
+ * et l'envoyer gr√¢ce au socket
  */
 public class ThreadTimeMySql2 implements Runnable{
 	
@@ -31,14 +29,14 @@ public class ThreadTimeMySql2 implements Runnable{
 			 try {
 					Thread.sleep(20000);
 					/**
-					 * CrÈer un socket avec l'adresse ip du destinataire
+					 * Cr√©er un socket avec l'adresse ip du destinataire
 					 */
 					s = new Socket("10.30.1.59",6660);
 					 
 				    DataOutputStream os = new DataOutputStream(s.getOutputStream());
 				    
 				    /**
-					 * Appelle la mÈthode indicator() de la classe PerformanceIndicatorMySql
+					 * Appelle la m√©thode indicator() de la classe PerformanceIndicatorMySql
 					 */
 					String  pl=PerformanceIndicatorMySql.indicator(stmt1);
 					String p="indicateursGlobauxMysql";

@@ -1,4 +1,3 @@
-package l3w1_Projet;
 
 import java.io.IOException;
 import java.util.Properties;
@@ -6,7 +5,7 @@ import org.json.JSONException;
 
 public class OpeSysMain extends OpeSys {
     /**
-     * La fonction principale qui invoquera éventuellement les autres fonctions, retourne les données système d'exploitation windows 
+     * La fonction principale qui invoquera Ã©ventuellement les autres fonctions, retourne les donnÃ©es systÃ¨me d'exploitation windows 
      * @param args, le nom d'un tableau
      * @throws IOException
      * @throws JSONException
@@ -27,7 +26,7 @@ public class OpeSysMain extends OpeSys {
             System.out.println(osName);
             
             /**
-             * Affiche les données OpeSys dans un fichier 
+             * Affiche les donnÃ©es OpeSys dans un fichier 
              */
             String obj = null;
             OpeSysMain opeSys = new OpeSysMain();
@@ -35,7 +34,7 @@ public class OpeSysMain extends OpeSys {
             opeSys.filewrite(obj);
     	
             /**
-             * Autre manière 
+             * Autre maniÃ¨re 
              */
     		/*OperatingSystemMXBean osMxBean = (OperatingSystemMXBean) ManagementFactory.getOperatingSystemMXBean(); 
             com.sun.management.OperatingSystemMXBean privateOsMxBean = (com.sun.management.OperatingSystemMXBean) osMxBean; 

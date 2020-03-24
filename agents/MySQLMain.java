@@ -1,4 +1,3 @@
-package l3w1_Projet;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -17,7 +16,7 @@ public class MySQLMain {
 	static ResultSet rs;
 	
 	/**
-	 * La fonction principale qui invoquera éventuellement les autres fonctions
+	 * La fonction principale qui invoquera Ã©ventuellement les autres fonctions
 	 * @param args, le nom d'un tableau
 	 * @throws IOException
 	 * @throws JSONException
@@ -34,14 +33,14 @@ public class MySQLMain {
 				
 				connectionAvecMySql = agent.getConnection();
 				/*
-				 * Les 2 objets qui permettent de construire et récuperer des requêtes de la BDD
-				 * Création d'un objet statement (création et exécution de la requête SQL)
+				 * Les 2 objets qui permettent de construire et rÃ©cuperer des requÃªtes de la BDD
+				 * CrÃ©ation d'un objet statement (crÃ©ation et exÃ©cution de la requÃªte SQL)
 				 */
 				ps = connectionAvecMySql.createStatement();
 				
 				/*
-				 * Objet rs contient le résultat de la requete SQL (récupère et affiche)
-				 * Modifier UrlDB (base de données Registration)
+				 * Objet rs contient le rÃ©sultat de la requete SQL (rÃ©cupÃ¨re et affiche)
+				 * Modifier UrlDB (base de donnÃ©es Registration)
 				 */
 				rs = ps.executeQuery("SELECT * from users");
 				
@@ -51,7 +50,7 @@ public class MySQLMain {
 				
 				while (rs.next()){
 					/*
-					 * récuperer les tuples de la table Users 
+					 * rÃ©cuperer les tuples de la table Users 
 					 */
 					System.out.print(rs.getInt("id_users")+" \t");
 					System.out.print(rs.getString("username")+"\t");
@@ -87,7 +86,7 @@ public class MySQLMain {
 			size.sizeofDataBase(ps);
 			//la taille used and free space
 			size.sizeofDataBase1(ps);
-			//La taille de toutes les tables d’une base
+			//La taille de toutes les tables dÂ’une base
 			size.sizeofTables(ps);
 			//La taille d'une table users de la base registration
 			size.sizeofTable1(ps);
@@ -97,7 +96,7 @@ public class MySQLMain {
 			
 			//indicateurs globaux mysql
 			indicator.indicatorGlobalMySql(ps);
-			//indicateurs globaux selectionnés
+			//indicateurs globaux selectionnÃ©s
 			indicator.indicatorGlobalMySqlSelected(ps);
 			//indicateurs de Performance niveau Queries  
 			indicator.performanceIndicator(ps);
@@ -105,7 +104,7 @@ public class MySQLMain {
  			indicator.indicator(ps);
 			//indicateur pour la collision
 			indicator.indicator2(ps);
-			//user de la base de données
+			//user de la base de donnÃ©es
 			indicator.users(ps);
 			
 			

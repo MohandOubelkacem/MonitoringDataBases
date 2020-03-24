@@ -1,0 +1,21 @@
+[{
+    "name": "Date",
+    "type": "date",
+    "format": "%-m/%d/%Y"
+},
+{
+    "name": "temp blks read",
+    "type": "number"
+},
+{
+    "name": "local blks read",
+    "type": "number"
+},
+{
+    "name": "calls",
+    "type": "number"
+},
+{
+    "name": "total time",
+    "type": "number"
+}]

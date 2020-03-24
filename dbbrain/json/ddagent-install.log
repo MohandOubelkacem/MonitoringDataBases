@@ -1,0 +1,142 @@
+[34m
+* Installing apt-transport-https
+[0m
+Ign:1 http://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.0 InRelease
+Ign:2 http://dl.google.com/linux/chrome/deb stable InRelease
+Hit:3 http://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.0 Release
+Get:4 http://dl.google.com/linux/chrome/deb stable Release [943 B]
+Get:5 https://packages.microsoft.com/ubuntu/16.04/prod xenial InRelease [4,003 B]
+Get:6 http://dl.google.com/linux/chrome/deb stable Release.gpg [819 B]
+Get:7 http://ftp.free.fr/pub/kali kali-rolling InRelease [30.5 kB]
+Get:9 https://packages.microsoft.com/ubuntu/16.04/prod xenial/main amd64 Packages [124 kB]
+Get:10 http://dl.google.com/linux/chrome/deb stable/main amd64 Packages [1,139 B]
+Get:11 http://ftp.free.fr/pub/kali kali-rolling/main amd64 Packages [16.6 MB]
+Get:12 http://ftp.free.fr/pub/kali kali-rolling/non-free amd64 Packages [193 kB]
+Get:13 http://ftp.free.fr/pub/kali kali-rolling/contrib amd64 Packages [96.4 kB]
+Fetched 17.1 MB in 13s (1,355 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  apt-transport-https
+0 upgraded, 1 newly installed, 0 to remove and 366 not upgraded.
+Need to get 153 kB of archives.
+After this operation, 160 kB of additional disk space will be used.
+Get:1 http://ftp.free.fr/pub/kali kali-rolling/main amd64 apt-transport-https all 2.0.0 [153 kB]
+Fetched 153 kB in 0s (378 kB/s)
+Selecting previously unselected package apt-transport-https.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 325788 files and directories currently installed.)
+Preparing to unpack .../apt-transport-https_2.0.0_all.deb ...
+Unpacking apt-transport-https (2.0.0) ...
+Setting up apt-transport-https (2.0.0) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  gnupg gnupg-l10n gnupg-utils gpg gpg-agent gpg-wks-client gpg-wks-server
+  gpgconf gpgsm gpgv
+Suggested packages:
+  tor parcimonie xloadimage scdaemon
+The following packages will be upgraded:
+  dirmngr gnupg gnupg-l10n gnupg-utils gpg gpg-agent gpg-wks-client
+  gpg-wks-server gpgconf gpgsm gpgv
+11 upgraded, 0 newly installed, 0 to remove and 355 not upgraded.
+Need to get 7,691 kB of archives.
+After this operation, 0 B of additional disk space will be used.
+Get:1 http://ftp.free.fr/pub/kali kali-rolling/main amd64 gpg-wks-client amd64 2.2.19-2 [504 kB]
+Get:2 http://ftp.free.fr/pub/kali kali-rolling/main amd64 dirmngr amd64 2.2.19-2 [736 kB]
+Get:3 http://ftp.free.fr/pub/kali kali-rolling/main amd64 gnupg-utils amd64 2.2.19-2 [884 kB]
+Get:4 http://ftp.free.fr/pub/kali kali-rolling/main amd64 gpg-wks-server amd64 2.2.19-2 [497 kB]
+Get:5 http://ftp.free.fr/pub/kali kali-rolling/main amd64 gpg-agent amd64 2.2.19-2 [638 kB]
+Get:6 http://ftp.free.fr/pub/kali kali-rolling/main amd64 gpg amd64 2.2.19-2 [889 kB]
+Get:7 http://ftp.free.fr/pub/kali kali-rolling/main amd64 gpgconf amd64 2.2.19-2 [529 kB]
+Get:8 http://ftp.free.fr/pub/kali kali-rolling/main amd64 gnupg-l10n all 2.2.19-2 [1,040 kB]
+Get:9 http://ftp.free.fr/pub/kali kali-rolling/main amd64 gnupg all 2.2.19-2 [745 kB]
+Get:10 http://ftp.free.fr/pub/kali kali-rolling/main amd64 gpgsm amd64 2.2.19-2 [624 kB]
+Get:11 http://ftp.free.fr/pub/kali kali-rolling/main amd64 gpgv amd64 2.2.19-2 [604 kB]
+Fetched 7,691 kB in 4s (1,717 kB/s)
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 325792 files and directories currently installed.)
+Preparing to unpack .../00-gpg-wks-client_2.2.19-2_amd64.deb ...
+Unpacking gpg-wks-client (2.2.19-2) over (2.2.19-1) ...
+Preparing to unpack .../01-dirmngr_2.2.19-2_amd64.deb ...
+Unpacking dirmngr (2.2.19-2) over (2.2.19-1) ...
+Preparing to unpack .../02-gnupg-utils_2.2.19-2_amd64.deb ...
+Unpacking gnupg-utils (2.2.19-2) over (2.2.19-1) ...
+Preparing to unpack .../03-gpg-wks-server_2.2.19-2_amd64.deb ...
+Unpacking gpg-wks-server (2.2.19-2) over (2.2.19-1) ...
+Preparing to unpack .../04-gpg-agent_2.2.19-2_amd64.deb ...
+Unpacking gpg-agent (2.2.19-2) over (2.2.19-1) ...
+Preparing to unpack .../05-gpg_2.2.19-2_amd64.deb ...
+Unpacking gpg (2.2.19-2) over (2.2.19-1) ...
+Preparing to unpack .../06-gpgconf_2.2.19-2_amd64.deb ...
+Unpacking gpgconf (2.2.19-2) over (2.2.19-1) ...
+Preparing to unpack .../07-gnupg-l10n_2.2.19-2_all.deb ...
+Unpacking gnupg-l10n (2.2.19-2) over (2.2.19-1) ...
+Preparing to unpack .../08-gnupg_2.2.19-2_all.deb ...
+Unpacking gnupg (2.2.19-2) over (2.2.19-1) ...
+Preparing to unpack .../09-gpgsm_2.2.19-2_amd64.deb ...
+Unpacking gpgsm (2.2.19-2) over (2.2.19-1) ...
+Preparing to unpack .../10-gpgv_2.2.19-2_amd64.deb ...
+Unpacking gpgv (2.2.19-2) over (2.2.19-1) ...
+Setting up gpgv (2.2.19-2) ...
+Setting up gnupg-l10n (2.2.19-2) ...
+Setting up gpgconf (2.2.19-2) ...
+Setting up gpg (2.2.19-2) ...
+Setting up gnupg-utils (2.2.19-2) ...
+Setting up gpg-agent (2.2.19-2) ...
+Setting up gpgsm (2.2.19-2) ...
+Setting up dirmngr (2.2.19-2) ...
+Setting up gpg-wks-server (2.2.19-2) ...
+Setting up gpg-wks-client (2.2.19-2) ...
+Setting up gnupg (2.2.19-2) ...
+Processing triggers for man-db (2.9.0-2) ...
+Processing triggers for kali-menu (2020.1.8) ...
+[34m
+* Installing APT package sources for Datadog
+[0m
+Warning: apt-key output should not be parsed (stdout is not a terminal)
+Executing: /tmp/apt-key-gpghome.1JNdokeVDy/gpg.1.sh --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 A2923DFF56EDA6E76E55E492D3A80E30382E94DE
+gpg: key D3A80E30382E94DE: public key "Datadog, Inc <package@datadoghq.com>" imported
+gpg: Total number processed: 1
+gpg:               imported: 1
+[34m
+* Installing the Datadog Agent package
+[0m
+Ign:1 https://apt.datadoghq.com stable InRelease
+Get:2 https://apt.datadoghq.com stable Release [8,324 B]
+Get:3 https://apt.datadoghq.com stable Release.gpg [819 B]
+Get:4 https://apt.datadoghq.com stable/7 amd64 Packages [1,961 B]
+Fetched 11.1 kB in 0s (30.6 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  datadog-agent
+0 upgraded, 1 newly installed, 0 to remove and 355 not upgraded.
+Need to get 135 MB of archives.
+After this operation, 453 MB of additional disk space will be used.
+Get:1 https://apt.datadoghq.com stable/7 amd64 datadog-agent amd64 1:7.17.1-1 [135 MB]
+Err:1 https://apt.datadoghq.com stable/7 amd64 datadog-agent amd64 1:7.17.1-1
+  Could not connect to apt.datadoghq.com:443 (13.225.31.12). - connect (113: No route to host) Could not connect to apt.datadoghq.com:443 (13.225.31.65). - connect (113: No route to host) Could not connect to apt.datadoghq.com:443 (13.225.31.63). - connect (113: No route to host) Could not connect to apt.datadoghq.com:443 (13.225.31.55). - connect (113: No route to host) [IP: 13.225.31.12 443]
+W: --force-yes is deprecated, use one of the options starting with --allow instead.
+E: Failed to fetch https://apt.datadoghq.com/pool/d/da/datadog-agent_7.17.1-1_amd64.deb  Could not connect to apt.datadoghq.com:443 (13.225.31.12). - connect (113: No route to host) Could not connect to apt.datadoghq.com:443 (13.225.31.65). - connect (113: No route to host) Could not connect to apt.datadoghq.com:443 (13.225.31.63). - connect (113: No route to host) Could not connect to apt.datadoghq.com:443 (13.225.31.55). - connect (113: No route to host) [IP: 13.225.31.12 443]
+E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+[31mERROR
+Failed to install the Datadog package, sometimes it may be
+due to another APT source failing. See the logs above to
+determine the cause.
+If the cause is unclear, please contact Datadog support.
+*****
+
+It looks like you hit an issue when trying to install the Agent.
+
+Troubleshooting and basic usage information for the Agent are available at:
+
+    https://docs.datadoghq.com/agent/basic_agent_usage/
+
+If you're still having problems, please send an email to support@datadoghq.com
+with the contents of ddagent-install.log and we'll do our very best to help you
+solve your problem.
+[0m

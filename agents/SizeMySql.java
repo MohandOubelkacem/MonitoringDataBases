@@ -1,4 +1,3 @@
-package l3w1_Projet;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -18,7 +17,7 @@ public class SizeMySql extends Thread{
 	public SizeMySql() {};
 	
 	/**
-	 * REQUETE : La taille totale de toutes les bases présentes dans MySql 
+	 * REQUETE : La taille totale de toutes les bases prÃ©sentes dans MySql 
 	 */
 	private static final String Size = "SELECT \r\n" + 
 			"    table_schema 'Database Name',\r\n" + 
@@ -28,8 +27,8 @@ public class SizeMySql extends Thread{
 			"GROUP BY table_schema;";
 
 	/**
-	 * récupérer la taille totale de toutes les bases dans MySql 
-	 * @param stmt, pour exécuter une instruction SQL
+	 * rÃ©cupÃ©rer la taille totale de toutes les bases dans MySql 
+	 * @param stmt, pour exÃ©cuter une instruction SQL
 	 * @return la taille totale de toutes les bases
 	 * @throws JSONException
 	 * @throws InterruptedException
@@ -45,7 +44,7 @@ public class SizeMySql extends Thread{
 		connectionAvecMySql = agent.getConnection();
 		
 		/**
-		 * Objet rs va contenir le résultat de la requête SQL 
+		 * Objet rs va contenir le rÃ©sultat de la requÃªte SQL 
 		 */
 		ResultSet rs;
 	    
@@ -109,7 +108,7 @@ public class SizeMySql extends Thread{
 			}
 				
 				return array.toString();
-				//return obj.toString(); méthode doit retourner un String 
+				//return obj.toString(); mÃ©thode doit retourner un String 
 	}
 	
 	 
@@ -123,8 +122,8 @@ public class SizeMySql extends Thread{
 				"where table_schema = \"mysql\";";
 	
 		/**
-		 * récupérer la taille used and free space dans MySql 
-		 * @param stmt, pour exécuter une instruction SQL
+		 * rÃ©cupÃ©rer la taille used and free space dans MySql 
+		 * @param stmt, pour exÃ©cuter une instruction SQL
 		 * @return la taille used and free space
 		 * @throws JSONException
 		 * @throws InterruptedException
@@ -201,7 +200,7 @@ public class SizeMySql extends Thread{
 		
 		
 		/**
-		 * REQUETE : La taille de toutes les tables d’une base dans MySql 
+		 * REQUETE : La taille de toutes les tables dÂ’une base dans MySql 
 		 */
 		private	static final String Size2 = "SELECT table_name AS \"Tables\", \r\n" + 
 						"round(((data_length + index_length) / 1024 / 1024), 2) \"Size in MB\" \r\n" + 
@@ -209,9 +208,9 @@ public class SizeMySql extends Thread{
 						"WHERE table_schema = \"mysql\";";
 				 
 		/**
-		 * récupérer La taille de toutes les tables d’une base dans MySql 
-		 * @param stmt, pour exécuter une instruction SQL
-		 * @return La taille de toutes les tables d’une base
+		 * rÃ©cupÃ©rer La taille de toutes les tables dÂ’une base dans MySql 
+		 * @param stmt, pour exÃ©cuter une instruction SQL
+		 * @return La taille de toutes les tables dÂ’une base
 		 * @throws JSONException
 		 * @throws InterruptedException
 		 * @throws SQLException
@@ -285,7 +284,7 @@ public class SizeMySql extends Thread{
 		
 		
 		/**
-		 * REQUETE : La taille d'une table d’une base dans MySql 
+		 * REQUETE : La taille d'une table dÂ’une base dans MySql 
 		 */
 		private	static final String Size3 = "SELECT table_name AS \"Tables\", \r\n" + 
 								"round(((data_length + index_length) / 1024 / 1024), 2) \"Size in MB\" \r\n" + 
@@ -294,8 +293,8 @@ public class SizeMySql extends Thread{
 
 	
 		/**
-		 * récupérer La taille d'une table d’une base dans MySql 
-		 * @param stmt, pour exécuter une instruction SQL
+		 * rÃ©cupÃ©rer La taille d'une table dÂ’une base dans MySql 
+		 * @param stmt, pour exÃ©cuter une instruction SQL
 		 * @return La taille d'une table users de la base registration
 		 * @throws JSONException
 		 * @throws InterruptedException

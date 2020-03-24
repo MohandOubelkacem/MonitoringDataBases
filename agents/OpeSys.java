@@ -1,4 +1,3 @@
-package l3w1_Projet;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -17,8 +16,8 @@ public class OpeSys {
     
 
     /**
-     * récupérer les données système d'exploitation windows 
-     * @return les données du système d'exploitation windows (process cpu load, system cpu load...)
+     * rÃ©cupÃ©rer les donnÃ©es systÃ¨me d'exploitation windows 
+     * @return les donnÃ©es du systÃ¨me d'exploitation windows (process cpu load, system cpu load...)
      * @throws IOException
      * @throws JSONException
      */
@@ -28,12 +27,12 @@ public class OpeSys {
         System.out.println("*************************OS WINDOWS 10***************************");
         
         /**
-         * Interface où JVM est en cours d'exécution 
+         * Interface oÃ¹ JVM est en cours d'exÃ©cution 
          */
         OperatingSystemMXBean operatingSystemMXBean = ManagementFactory.getOperatingSystemMXBean();
         JSONObject obj = new JSONObject();
         for (Method method : operatingSystemMXBean.getClass().getDeclaredMethods()) {
-            method.setAccessible(true);
+	            method.setAccessible(true);
             if (method.getName().startsWith("get") && Modifier.isPublic(method.getModifiers())) {
                     Object value;
                 try {
@@ -53,9 +52,9 @@ public class OpeSys {
         }
     
     /**
-     * récupérer les données sous JSON
-     * @param obj, prendre un String en paramètre 
-     * @return un fichier json avec des données système
+     * rÃ©cupÃ©rer les donnÃ©es sous JSON
+     * @param obj, prendre un String en paramÃ¨tre 
+     * @return un fichier json avec des donnÃ©es systÃ¨me
      */
     public Object filewrite(String obj) {
             FileWriter writeFile = null;                

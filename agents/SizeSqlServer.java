@@ -1,5 +1,3 @@
-package l3w1_Projet;
-
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -29,8 +27,8 @@ public class SizeSqlServer extends Thread {
 			"FROM sys.database_files;";
 
 	/**
-	 * récupérer La taille totale d'une base dans Sql Server 
-	 * @param stmt, pour exécuter une instruction SQL
+	 * rÃ©cupÃ©rer La taille totale d'une base dans Sql Server 
+	 * @param stmt, pour exÃ©cuter une instruction SQL
 	 * @return la taille totale de la base master
 	 * @throws InterruptedException
 	 * @throws SQLException
@@ -109,7 +107,7 @@ public class SizeSqlServer extends Thread {
 			    }
 			}
 			return array.toString(); 
-				//return obj.toString(); méthode doit retourner un String 
+				//return obj.toString(); mÃ©thode doit retourner un String 
 			}
 	
 	 
@@ -133,8 +131,8 @@ public class SizeSqlServer extends Thread {
 
 		
 		/**
-		 * récupérer La taille used and free space dans Sql Server
-		 * @param stmt, pour exécuter une instruction SQL
+		 * rÃ©cupÃ©rer La taille used and free space dans Sql Server
+		 * @param stmt, pour exÃ©cuter une instruction SQL
 		 * @return la taille used and free space
 		 * @throws JSONException
 		 * @throws InterruptedException
@@ -211,7 +209,6 @@ public class SizeSqlServer extends Thread {
 			    }
 			}
 				return array1.toString();
-				//return obj1.toString(); méthode doit retourner un String 
+				//return obj1.toString(); mÃ©thode doit retourner un String 
 			}
 }
-

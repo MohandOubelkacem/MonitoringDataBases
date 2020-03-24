@@ -1,4 +1,4 @@
-package l3w1_Projet;
+
 
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -8,8 +8,8 @@ import java.sql.Statement;
 import org.json.JSONException;
 
 /**
- * la classe permet d'exÈcuter la mÈthode os() de la classe OpeSys plusiers fois gr‚ce au thread 
- * et l'envoyer gr‚ce au socket
+ * la classe permet d'ex√©cuter la m√©thode os() de la classe OpeSys plusiers fois gr√¢ce au thread 
+ * et l'envoyer gr√¢ce au socket
  */
 public class ThreadTimeSqlServer3 implements Runnable{
 	
@@ -30,26 +30,27 @@ public class ThreadTimeSqlServer3 implements Runnable{
 			 try {
 					Thread.sleep(20000);
 					/**
-					 * CrÈer un socket avec l'adresse ip du destinataire
+					 * Cr√©er un socket avec l'adresse ip du destinataire
 					 */
 					s = new Socket("10.30.1.59",6660);
 					
 					DataOutputStream os = new DataOutputStream(s.getOutputStream());
 					
 					/**
-					 * Appelle la mÈthode printUsage() de la classe OpeSys
+					 * Appelle la m√©thode printUsage() de la classe OpeSys
 					 */
 					String  pl=OpeSys.os();
 					String p="DonneeSystem";
 					os.writeUTF(p);
 					os.writeUTF(pl);
-					os.flush();
-					
-					
-			} catch (IOException e1 ) {
+					os.flush(); 
 				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			}catch (InterruptedException e1) {
+		
+			 }catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				
+			 }catch (InterruptedException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			} catch (JSONException e) {

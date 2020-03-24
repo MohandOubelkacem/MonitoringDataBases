@@ -1,0 +1,33 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+ .footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: grey;
+   color: white;
+   text-align: center;
+ }
+ 
+ .header blockquote {
+ background-color: grey;
+ 
+ 
+  }
+	 
+	
+.nav {
+  
+  margin-top: 20px;
+ }
+
+ 
+.table-wrapper-2 {
+    display: block;
+    max-height: 300px;
+    overflow-y: auto;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+}

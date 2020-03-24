@@ -1,4 +1,3 @@
-package l3w1_Projet;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -13,8 +12,8 @@ static Connection connectionAvecMySql = null;
 	public AgentMySQL_D() {};
 	
 	/**
-	 * Se connecter à la base de données MySql 
-	 * @return Connexion reussie ou refusée
+	 * Se connecter Ã  la base de donnÃ©es MySql 
+	 * @return Connexion reussie ou refusÃ©e
 	 */
 	public Connection getConnection(){	
 
@@ -24,7 +23,7 @@ static Connection connectionAvecMySql = null;
 			
 			try {
 				/**
-				 *Charger la classe correspondant au driver souhaité
+				 *Charger la classe correspondant au driver souhaitÃ©
 				 */
 				Class.forName("com.mysql.jdbc.Driver");
 				System.out.println("DRIVER OK");
@@ -37,7 +36,7 @@ static Connection connectionAvecMySql = null;
 			}
 			try {
 				/**
-				 *Obtenir une connexion à la base de données  
+				 *Obtenir une connexion Ã  la base de donnÃ©es  
 				 */
 				connectionAvecMySql = DriverManager.getConnection(urlBD,user,password);
 				System.out.println("Connection sucess!"+"\n");
@@ -53,8 +52,8 @@ static Connection connectionAvecMySql = null;
 		/**
 		 *Tester si getConnection fonctionne 
 		 */
-		/*public static void main(String[] args) throws SQLException {
+		public static void main(String[] args) throws SQLException {
 			AgentMySQL_D agentmysql = new AgentMySQL_D();
 			agentmysql.getConnection();
-		}*/
+		}
 }

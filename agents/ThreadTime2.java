@@ -1,4 +1,4 @@
-package projetW1;
+
 
 import java.io.DataOutputStream;
 
@@ -10,11 +10,11 @@ import java.sql.Statement;
 
 import org.json.JSONException;
 /** 
- * la classe permet d'exécuter la méthode indicateursGlobaux de AgentPostgres plusiers fois grâce  au thread et l'envoyer grâce 
+ * la classe permet d'exÃ©cuter la mÃ©thode indicateursGlobaux de AgentPostgres plusiers fois grÃ¢ce  au thread et l'envoyer grÃ¢ce 
  *  au socket
  * 
- * on peut utiliser la même classe pour les autre bases de données  il faut juste changer la méthode indicateursGlobaux  de AgentPostgres 
- *  par la base de données concerné 
+ * on peut utiliser la mÃªme classe pour les autre bases de donnÃ©es  il faut juste changer la mÃ©thode indicateursGlobaux  de AgentPostgres 
+ *  par la base de donnÃ©es concernÃ© 
  */
 public class ThreadTime2 implements Runnable {
 	Connection connection;
@@ -32,15 +32,15 @@ public class ThreadTime2 implements Runnable {
 		while(true) {
 			 try {
 					Thread.sleep(10000);
-					s = new Socket("10.30.1.59",6660);// Crée socket:s avec l'adresse ip du destinataire et le port 6660
+					s = new Socket("10.30.1.59",6660);// Créer socket:s avec l'adresse ip du destinataire et le port 6660
 				
 				 DataOutputStream 	os = new DataOutputStream(s.getOutputStream());
-					String  pl=AgentPostgres.indicateursGlobaux(stmt1);// Appelle de la méthode indicateurGolaux de la classe AgentPostgres
+					String  pl=AgentPostgres.indicateursGlobaux(stmt1);// Appelle de la mÃ©thode indicateurGolaux de la classe AgentPostgres
 					String p="indicateursGlobauxPostger";
-					os.writeUTF(p);//écrire sur le flux de sortie (socket s)
-				 os.writeUTF(pl);
-				 os.flush();
-
+					os.writeUTF(p);//Ã©crire sur le flux de sortie (socket s)
+					os.writeUTF(pl);
+					os.flush();
+				 
 	
 					
 					
@@ -65,5 +65,4 @@ public class ThreadTime2 implements Runnable {
 	}
 
 }}
-
 

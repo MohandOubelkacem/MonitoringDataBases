@@ -1,0 +1,21 @@
+[{
+    "name": "Date",
+    "type": "date",
+    "format": "%-m/%d/%Y"
+},
+{
+    "name": "SUM LOCK TIME",
+    "type": "number"
+},
+{
+    "name": "SUM TIMER WAIT",
+    "type": "number"
+},
+{
+    "name": "COUNT STAR",
+    "type": "number"
+},
+{
+    "name": "SUM ROWS SENT",
+    "type": "number"
+}]
