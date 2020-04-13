@@ -27,7 +27,7 @@ x = dataset.iloc[:,[0,1,3,4]].values
 #redimmensionnement de y
  
 y = dataset.iloc[:,[2]].values
-y=np.reshape(y, (-1,1))
+
 #eviter qu'une variable trop differentes prennent le dessus et influances les autres valeurs  
 scaler_x = MinMaxScaler()
 scaler_y = MinMaxScaler()
@@ -37,7 +37,7 @@ print(scaler_y.fit(y))
 yscale=scaler_y.transform(y)
 
 from sklearn.model_selection import train_test_split
-x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=0.2)
+x_train,x_test,y_train,y_test=train_test_split(xscale,yscale,test_size=0.2)
 #Changer l'échelle
 #On changera l'échel des variables pour qu'aucune var n'influence une autre
 from sklearn.preprocessing import StandardScaler
@@ -53,7 +53,7 @@ classifier.add(Dense(units=4,activation='sigmoid',
                      input_dim=4))
 #Ajouter une deuxième couche cachée
 classifier.add(Dense(units=4,activation='sigmoid'))
-
+classifier.add(Dense(units=6,activation='sigmoid'))
 #Ajouter la couche de sortie 
 classifier.add(Dense(units=1,activation='linear'))
 classifier.summary()
@@ -89,7 +89,33 @@ for layer in classifier.layers:
 
 
 #make statistic 
-import statsmodels.formula.api as sm
+import statsmodels.api as smap
+
 x = np.append(arr = np.ones((1184, 3)).astype(int), values = x, axis = 1)
 X_opt = x[:,[0, 1, 2, 3, 4,5]]
 
+regressor_OLS = smap.OLS(endog = y, exog = X_opt).fit()
+regressor_OLS.summary()
+
+# Fitting Polynomial Regression to the dataset 
+from sklearn.preprocessing import PolynomialFeatures 
+  
+poly = PolynomialFeatures(degree = 1) 
+x_poly = poly.fit_transform(x) 
+  
+poly.fit(x_poly, y) 
+lin2 = LinearRegression() 
+lin2.fit(x_poly, y) 
+print(y.size,y.shape)
+y=np.empty_like(x)
+print(x.size,x.shape)
+print(y.size,y.shape)
+
+plt.scatter(x, y, color = 'blue') 
+
+plt.plot(x, lin2.predict(poly.fit_transform(x)), color = 'red') 
+plt.title('Polynomial Regression') 
+plt.xlabel('') 
+plt.ylabel('Pressure') 
+  
+plt.show() 
